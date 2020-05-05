@@ -56,4 +56,8 @@ Si lo que se quiere cifrar es un conjunto de archivos y directorios bastaría co
 ## Cifrado de ficheros con funciones hash
 
 
-## Cifrado de ficheros con clave pública
+## Cifrado asimétrico de ficheros con clave pública
+1. Para cifrar un archivo con clave pública se ha de ejecutar el siguiente comando:
+    ```bash
+    ~$ gpg -e -u ​"mi identificador"​ -r ​ "el del destinatario"​ prueba.txt
+    ```
