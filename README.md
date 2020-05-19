@@ -57,7 +57,7 @@ Para seguir los pasos de esta guía primero debes tener instalado en tu sistema 
     Dirección de correo electrónico: jdg@member.fsf.org
     ```
 
-    También un comentario, es opcional, puedes poner algo que te identifique o dejarlo en blanco, yo pondré un mensaje para que se vea cómo quedaría:
+    También un comentario, es opcional, puedes poner algo que te identifique o dejarlo en blanco, yo pondré un mensaje para que se vea como quedaría:
     ```bash
     Comentario: With Free Software you have freedom!
     ```
@@ -69,9 +69,9 @@ Para seguir los pasos de esta guía primero debes tener instalado en tu sistema 
 
     ¿Cambia (N)ombre, (C)omentario, (D)irección o (V)ale/(S)alir? V
     ```
-    Al pulsar *intro* nos pedirá añadir un *passphrase* o contraseña. **Esta contraseña es importantísima**, es la que no debemos olvidar jamás, ya que se utilizará para cifrar y descifrar con nuestra clave privada. Pedirá introducirla dos veces. Si la perdemos u olvidamos ya no podremos descrifrar nuca más la información que fuera cifrada anteriormente.
+    Al pulsar *intro* nos pedirá añadir un *passphrase* o contraseña. **Esta contraseña es importantísima**, es la que no debemos olvidar jamás, ya que se utilizará para cifrar y descifrar con nuestra clave privada. Pedirá introducirla dos veces. Si la perdemos u olvidamos ya no podremos descifrar nunca más la información que fuera cifrada anteriormente.
 
-    En este momento se estará generando la clave, para ello empleará varios bytes "aleatorios" que podremos generar con el simple hecho de mover el raton por la pantalla. Hay que hacerlo durante unos pocos segundos hasta que se devuelva el prompt de la consola:
+    En este momento se estará generando la clave, para ello emplea varios bytes "aleatorios" que podremos generar con el simple hecho de mover el ratón por la pantalla. Hay que hacerlo durante unos pocos segundos hasta que se devuelve el prompt de la consola:
     ```bash
     Es necesario generar muchos bytes aleatorios. Es una buena idea realizar
     alguna otra tarea (trabajar en otra ventana/consola, mover el ratón, usar
@@ -111,11 +111,11 @@ Para seguir los pasos de esta guía primero debes tener instalado en tu sistema 
     ssb   rsa4096 2020-05-08 [E]
     ```
 
-_**Nota**: Esta par de claves que acabo de generar son solo una demo para esta sección de este tutorial. En las siguiente secciones utilizaré como ejemplo mis claves reales que no tienen por que tener las mismas opciones._
+_**Nota**: Esta par de claves que acabo de generar son solo una demo para esta sección de este tutorial. En las siguiente secciones utilizaré como ejemplo mis claves reales que no tienen porqué tener las mismas opciones._
 
 ## Exportar mi clave pública
 
-1. Una vez generes tu par de claves (pública/privada) es muy importante que exportes tu clave pública para compartirla con los demás, con cuanta más gente mejor. Realmente no hay nada malo en que personas desconocidas tiengan tu clave pública, todo lo contrario, puede ser muy beneficioso hacer que tu clave pública esté disponible y que las personas puedan encontrar fácilmente tu clave para comunicarse contigo de una forma más segura, cuanto antes mejor. Para exportar tu propia clave pública basta con ejecutar el siguiente comando (*en este ejemplo aparece mi clave pública truncada ya que es muy larga; la clave completa está [aquí](jdg-pubkey.txt)*):
+1. Una vez generes tu par de claves (pública/privada) es muy importante que exportes tu clave pública para compartirla con los demás, con cuanta más gente mejor. Realmente no hay nada malo en que personas desconocidas tengan tu clave pública, todo lo contrario, puede ser muy beneficioso hacer que tu clave pública esté disponible y que las personas puedan encontrar fácilmente tu clave para comunicarse contigo de una forma más segura, cuanto antes mejor. Para exportar tu propia clave pública basta con ejecutar el siguiente comando (*en este ejemplo aparece mi clave pública truncada ya que es muy larga; la clave completa está [aquí](jdg-pubkey.txt)*):
     ```bash
     ~$ gpg --export --armor jdg@member.fsf.org
     -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -139,7 +139,7 @@ _**Nota**: Esta par de claves que acabo de generar son solo una demo para esta s
 
 3. Tanto si obtienes tu clave pública por pantalla en modo texto como si la vuelcas en un archivo, puedes compartirla con tus amigos, conocidos o con cualquier persona, enviándosela por mail o publicándola en algún servidor de claves como, como [Rediris](https://www.rediris.es/keyserver/) o [MIT PGP Key server](https://pgp.mit.edu/).
 
-4. Para publicar tu clave pública en un servidor de claves puedes hacerlo directamente desde la web del servidor que elijas, o bien puedes hacerlo desde línea de comandos pasándole el *key_id* de tu clave pública (los últimos 8 *bytes* de tu fingerprint) de la siguente forma:
+4. Para publicar tu clave pública en un servidor de claves puedes hacerlo directamente desde la web del servidor que elijas, o bien puedes hacerlo desde línea de comandos pasándole el *key_id* de tu clave pública (los últimos 8 *bytes* de tu fingerprint) de la siguiente forma:
     ```bash
     ~$ gpg --send-keys --keyserver pgp.mit.edu D6648E2B
     gpg: enviando clave 5BDCC668D6648E2B a hkp://pgp.mit.edu
@@ -161,7 +161,7 @@ _**Nota**: Esta par de claves que acabo de generar son solo una demo para esta s
     gpg: siguiente comprobación de base de datos de confianza el: 2020-10-18
     ```
 
-3. Para estar realmente seguro de qué la clave pública que has importado es la de esa persona, se debe obtener el *fingerprint* o seguir una cadena de firmas de personas de confianza. Una manera fiable de obtener el *fingerprint* de una persona es dándola en mano, a través de una tarjeta o papel donde esté escrita. Esta práctica es muy habitual en una [Key Signing Party](https://es.wikipedia.org/wiki/Fiesta_de_firmado_de_claves).
+3. Para estar realmente seguro de que la clave pública que has importado es la de esa persona, se debe obtener el *fingerprint* o seguir una cadena de firmas de personas de confianza. Una manera fiable de obtener el *fingerprint* de una persona es dándola en mano, a través de una tarjeta o papel donde esté escrita. Esta práctica es muy habitual en una [Key Signing Party](https://es.wikipedia.org/wiki/Fiesta_de_firmado_de_claves).
 
     <p align="center"><a src="img/gpg_00.png"><img width=425 src="img/gpg_00.png"></a>&nbsp;<a src="img/gpg_00.png"><img width=425 src="img/gpg_01.png"></a></p>
     <br>
@@ -176,7 +176,7 @@ _**Nota**: Esta par de claves que acabo de generar son solo una demo para esta s
     ```
     Podemos ver que la confianza en esta clave pública aparece como `[desconocida]`.
 
-4. Si tras comprobar los *fingerprints* estos coinciden podríamos aumentar el nivel de confianza que tenemos con esa persona mediante el siguiente comando:
+5. Si tras comprobar los *fingerprints* estos coinciden podríamos aumentar el nivel de confianza que tenemos con esa persona mediante el siguiente comando:
     ```bash
     ~$ gpg --update-trustdb
     gpg: marginals needed: 3  completes needed: 1  trust model: pgp
@@ -212,7 +212,7 @@ _**Nota**: Esta par de claves que acabo de generar son solo una demo para esta s
     sub   rsa4096 2013-07-20 [E]
     ```
 
-5. También podemos firmar la clave que acabamos de importar. Firmar una clave significa que confías en la clave que se se te ha proporcionado y que has verificado que está asociada con la persona en cuestión. Para firmar una clave simplemente ejecutamos:
+6. También podemos firmar la clave que acabamos de importar. Firmar una clave significa que confías en la clave que se se te ha proporcionado y que has verificado que está asociada con la persona en cuestión. Para firmar una clave simplemente ejecutamos:
     ```bash
     ~$ gpg --sign-key rms@gnu.org
 
@@ -299,9 +299,9 @@ Tras ejecutar este comando se generará un nuevo archivo `prueba.txt.gpg` que so
 
 ## Eliminar claves
 
-Podemos eliminar claves públicas (la nuestra o las de otras personas) de nuestro anillo de confianza en GPG. Es importante tener en cuenta que si lo que queremos eliminar es una clave pública nuestra, si esta está asociada a una clave privada deberemos eliminar primero la clave privada, sino nos dará erroSi se trata de la clave pública de otra persona se peude borrar sin problemas sin tener que hacer nada antes.
+Podemos eliminar claves públicas (la nuestra o las de otras personas) de nuestro anillo de confianza en GPG. Es importante tener en cuenta que si lo que queremos eliminar es una clave pública nuestra, si esta está asociada a una clave privada deberemos eliminar primero la clave privada, sino nos dará error. Si se trata de la clave pública de otra persona se puede borrar sin problemas sin tener que hacer nada antes.
 
-1. Para eliminar una clave privada basta con ejecutar el siguiente comando pasándole el *key_id* de tu clave pública (los últimos 8 *bytes* de tu fingerprint) de la siguente forma:
+1. Para eliminar una clave privada basta con ejecutar el siguiente comando pasándole el *key_id* de tu clave pública (los últimos 8 *bytes* de tu fingerprint) de la siguiente forma:
     ```bash
     ~$ gpg --delete-secret-key B1958BAD
     gpg (GnuPG) 2.2.4; Copyright (C) 2017 Free Software Foundation, Inc.
