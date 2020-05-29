@@ -1,4 +1,4 @@
-# Tutorial: GnuPG
+# GnuPG
 
 **GNU Privacy Guard** ([GnuPG](https://gnupg.org/) o GPG) es una herramienta de cifrado y firmas digitales desarrollado por *Werner Koch*, que viene a ser un reemplazo del **Pretty Good Privacy** ([PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)) pero con la principal diferencia que es [Software Libre](https://en.wikipedia.org/wiki/Free_software) licenciado bajo licencia [GPLv3](https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3). GPG utiliza el estándar del IETF denominado [OpenPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP).
 
